@@ -103,9 +103,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({4:[function(require,module,exports) {
-console.log("Hello, Parsel!");
-},{}],6:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// export const plus = (a, b) => a + b;
+
+var Arithmetic = function () {
+  function Arithmetic() {
+    _classCallCheck(this, Arithmetic);
+  }
+
+  _createClass(Arithmetic, [{
+    key: "plus",
+    value: function plus(a, b) {
+      return a + b;
+    }
+  }, {
+    key: "minus",
+    value: function minus(a, b) {
+      return a - b;
+    }
+  }]);
+
+  return Arithmetic;
+}();
+
+var deduct = exports.deduct = new Arithmetic();
+},{}],4:[function(require,module,exports) {
+"use strict";
+
+var _module = require("./src/module");
+
+alert(_module.deduct.plus(3, 4));
+alert(_module.deduct.minus(9, 5));
+},{"./src/module":6}],8:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -134,7 +173,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '63325' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '56485' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -275,5 +314,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[6,4], null)
+},{}]},{},[8,4], null)
 //# sourceMappingURL=/react-thinknetica.ddfd335b.map
