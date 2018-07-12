@@ -1,4 +1,5 @@
-import { deduct } from "./src/module";
+import React from "react";
+import ReactDOM from "react-dom";
+import Hello from "./src/Hello";
 
-alert(deduct.plus(3, 4));
-alert(deduct.minus(9, 5));
+ReactDOM.render(<Hello />, document.getElementById('root'));
