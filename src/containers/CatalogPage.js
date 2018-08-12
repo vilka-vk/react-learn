@@ -8,7 +8,6 @@ class CatalogPage extends Component {
     return (
       <Fragment>
         <Catalog products = { products } />
-        <CartTotal/>
       </Fragment>
     );
   }
