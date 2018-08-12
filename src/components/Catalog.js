@@ -5,20 +5,18 @@ class Catalog extends Component {
   render() {
     const { products } = this.props;
 
-    const product =  products.map(function(item) {
+    const children =  products.map(function(item) {
       return (
         <ProductCard
-          key={ item.id }
-          imageUrl={ item.imageUrl }
-          title={ item.title }
-          price={ item.price }
+          key={ `ProductCard-${item.id}` }
+          {...item}
         />
       )
     })
 
     return (
       <div style = { productCardWrapperStyle }>
-        { product }
+        { children }
       </div>
     );
   }

@@ -7,8 +7,7 @@ class ProductCard extends Component {
   render() {
     const {
       imageUrl,
-      title,
-      price
+      title
     } = this.props;
 
     return (
@@ -16,11 +15,9 @@ class ProductCard extends Component {
         <Image
           src = { imageUrl }
           alt = { title }
-          width = '100%'
-          height = '209px'
         />
         <TextBox text = { title } />
-        <Price price = { price } />
+        <Price {...this.props} />
       </div>
     );
   }
