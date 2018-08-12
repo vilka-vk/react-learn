@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Image from './Image';
 import TextBox from './TextBox';
 import Price from './Price';
+import AddToCartButton from './Cart/AddToCartButton';
 
 class ProductCard extends Component {
   render() {
@@ -18,6 +19,7 @@ class ProductCard extends Component {
         />
         <TextBox text = { title } />
         <Price {...this.props} />
+        <AddToCartButton/>
       </div>
     );
   }
@@ -31,7 +33,6 @@ const productCardStyle = {
   border: '2px solid black',
   textAlign: 'center',
   paddingBottom: '30px',
-  cursor: 'pointer',
 };
 
 export default ProductCard;

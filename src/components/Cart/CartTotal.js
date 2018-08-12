@@ -5,7 +5,7 @@ class CartTotal extends Component {
     const { total } = this.props;
 
     return (
-      <button>В корзине: ${total} товаров</button>
+      <button>В корзине: { total } товаров</button>
     );
   }
 }
