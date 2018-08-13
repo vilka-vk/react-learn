@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Image from './Image';
-import TextBox from './TextBox';
-import Price from './Price';
-import AddToCartButton from './Cart/AddToCartButton';
+import Image from './ProductCard/Image';
+import ItemName from './ProductCard/ItemName';
+import Price from './ProductCard/Price';
+import AddToCartButton from './ProductCard/AddToCartButton';
 
 class ProductCard extends Component {
   render() {
@@ -17,7 +17,7 @@ class ProductCard extends Component {
           src = { imageUrl }
           alt = { title }
         />
-        <TextBox text = { title } />
+        <ItemName text = { title } />
         <Price {...this.props} />
         <AddToCartButton/>
       </div>

@@ -27,6 +27,7 @@ const productCardWrapperStyle = {
   flexFlow: 'row wrap',
   alignItems: 'flex-start',
   justifyContent: 'space-around',
+  flexGrow: '1',
 };
 
 export default Catalog;

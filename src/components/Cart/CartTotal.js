@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class CartTotal extends Component {
   render() {
@@ -12,6 +13,10 @@ class CartTotal extends Component {
 
 CartTotal.defaultProps = {
   total: 0
+};
+
+CartTotal.propTypes = {
+  total: PropTypes.number.isRequired
 };
 
 export default CartTotal;
