@@ -1,5 +1,21 @@
-import { createContext } from 'react';
+import React, { createContext, Component } from 'react';
 
-const cartContext = createContext();
+export const CartContext = createContext();
 
-export default cartContext;
+export class CartProvider extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+    };
+  }
+  render() {
+    const { items } = this.state;
+    const { children } = this.props;
+    return(
+      <CartContext.Provider value = { items }>
+        { children }
+      </CartContext.Provider>
+    )
+  }
+}
