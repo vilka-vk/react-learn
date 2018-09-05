@@ -13,18 +13,19 @@
     "url": "https://github.com/vilka-vk/react-learn/issues"
   },
   "homepage": "https://github.com/vilka-vk/react-learn#readme",
-  "devDependencies": {
+  "dependencies": {
+    "npm": "^6.2.0",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.6.2",
     "superagent": "^3.8.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "npm": "^6.2.0"
   }
 }

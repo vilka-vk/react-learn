@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import Image from './Image';
-import TextBox from './TextBox';
-import Price from './Price';
+import Image from './ProductCard/Image';
+import ItemName from './ProductCard/ItemName';
+import Price from './ProductCard/Price';
+import AddToCartButton from './ProductCard/AddToCartButton';
 
 class ProductCard extends Component {
   render() {
     const {
       imageUrl,
-      title,
-      price
+      title
     } = this.props;
 
     return (
@@ -16,11 +16,10 @@ class ProductCard extends Component {
         <Image
           src = { imageUrl }
           alt = { title }
-          width = '100%'
-          height = '209px'
         />
-        <TextBox text = { title } />
-        <Price price = { price } />
+        <ItemName text = { title } />
+        <Price {...this.props} />
+        <AddToCartButton/>
       </div>
     );
   }
@@ -34,7 +33,6 @@ const productCardStyle = {
   border: '2px solid black',
   textAlign: 'center',
   paddingBottom: '30px',
-  cursor: 'pointer',
 };
 
 export default ProductCard;
